@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="120" height="120" src="https://img.icons8.com/fluency/100/flutter.png" alt="flutter"/>
+  <img width="100" height="100" src="https://img.icons8.com/fluency/100/flutter.png" alt="flutter"/>
   <h2>Flutter Project</h2>
 </div>
 
