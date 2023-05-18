@@ -3,10 +3,10 @@
   <h2>Flutter Project</h2>
 </div>
 
-### Language
+### Language / 言語
 ![Dart](https://img.shields.io/badge/dart-black?style=for-the-badge&logo=dart)
 
-### Member
+### Member / メンバー
 - <a href="https://github.com/Himabitoo">Himabitoo</a>
 - <a href="https://github.com/Drowsy00">Drowsy</a>
 
