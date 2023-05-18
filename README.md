@@ -1,5 +1,14 @@
-# Itproject
+<div align="center">
+  <img width="120" height="120" src="https://img.icons8.com/fluency/120/flutter.png" alt="flutter"/>
+  <h2>Flutter Project</h2>
+</div>
 
-This is sns application.
+### Language
+![Dart](https://img.shields.io/badge/dart-black?style=for-the-badge&logo=dart)
 
-共同開発
+### Member
+- <a href="https://github.com/Himabitoo">Himabitoo</a>
+- <a href="https://github.com/Drowsy00">Drowsy</a>
+
+
+<div align="center"><a  href="https://icons8.com/icon/pCvIfmctRaY8/flutter">Flutter</a> icon by <a href="https://icons8.com">Icons8</a></div>
