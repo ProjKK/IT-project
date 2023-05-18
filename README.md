@@ -5,6 +5,8 @@
 
 ### Language / 言語
 ![Dart](https://img.shields.io/badge/dart-black?style=for-the-badge&logo=dart)
+![Java](https://img.shields.io/badge/java-black?style=for-the-badge&logo=openjdk)
+![Swift](https://img.shields.io/badge/swift-black?style=for-the-badge&logo=swift)
 
 ### Member / メンバー
 - <a href="https://github.com/Himabitoo">Himabitoo</a>
