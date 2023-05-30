@@ -1,14 +1,13 @@
-// search_page.dart
+// dm_page.dart
 
 import 'package:flutter/material.dart';
 
-class SearchPage extends StatelessWidget {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: Center(
-        child: Text('Search Page'),
+        child: Text('Home Page'),
       ),
     );
   }

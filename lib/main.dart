@@ -1,88 +1,70 @@
 import 'package:flutter/material.dart';
-
-import 'package:itproject/search_page.dart';
-import 'package:itproject/dm_page.dart';
+import './home_page.dart';
+import './search_page.dart';
+import './dm_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(App());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Your App Name',
       theme: ThemeData(
-
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'SNS Application'),
+      home: MainPage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
+class MainPage extends StatefulWidget {
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  _MainPageState createState() => _MainPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  var _selectIndex = 0;
-
-  void _onTapItem(int index) {
-    setState(() {
-      _selectIndex = index;
-    });
-  }
-
-  var _pages = <Widget>[
+class _MainPageState extends State<MainPage> {
+  int _currentIndex = 0;
+  List<Widget> _pages = [
+    HomePage(),
     SearchPage(),
-    DmPage()
+    DMPage(),
   ];
-
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
 
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-
+      body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentIndex,
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
 
         items: const [
 
           BottomNavigationBarItem(
-            label: 'Home',
-            icon: Icon(Icons.home)
+            icon: Icon(Icons.home),
+            label: '', // テキストなし
           ),
 
           BottomNavigationBarItem(
-              label: 'Search',
-              icon: Icon(Icons.search)
+            icon: Icon(Icons.search),
+            label: '', // テキストなし
           ),
 
           BottomNavigationBarItem(
-              label: 'DM',
-              icon: Icon(Icons.mail)
-          )
+            icon: Icon(Icons.mail),
+            label: '', // テキストなし
+          ),
         ],
-
-
-
       ),
-
     );
   }
 }
