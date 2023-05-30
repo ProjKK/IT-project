@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'package:itproject/search_page.dart';
+import 'package:itproject/dm_page.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -32,17 +35,32 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  var _selectIndex = 0;
+
+  void _onTapItem(int index) {
+    setState(() {
+      _selectIndex = index;
+    });
+  }
+
+  var _pages = <Widget>[
+    SearchPage(),
+    DmPage()
+  ];
+
 
   @override
   Widget build(BuildContext context) {
 
     return Scaffold(
+
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
 
       bottomNavigationBar: BottomNavigationBar(
+
         items: const [
 
           BottomNavigationBarItem(
@@ -54,11 +72,15 @@ class _MyHomePageState extends State<MyHomePage> {
               label: 'Search',
               icon: Icon(Icons.search)
           ),
+
           BottomNavigationBarItem(
               label: 'DM',
               icon: Icon(Icons.mail)
           )
         ],
+
+
+
       ),
 
     );
