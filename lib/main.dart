@@ -41,6 +41,26 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
+
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [
+
+          BottomNavigationBarItem(
+            label: 'Home',
+            icon: Icon(Icons.home)
+          ),
+
+          BottomNavigationBarItem(
+              label: 'Search',
+              icon: Icon(Icons.search)
+          ),
+          BottomNavigationBarItem(
+              label: 'DM',
+              icon: Icon(Icons.mail)
+          )
+        ],
+      ),
+
     );
   }
 }
